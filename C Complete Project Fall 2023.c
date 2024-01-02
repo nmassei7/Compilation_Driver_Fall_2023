@@ -50,8 +50,8 @@ void sort_driver(void);
 void grades(void);
 void sum_arr2(void);
 int sump(int * start, int * end);
-int min(int * start, int * end);
-int max(int ar[], int n);
+int min_min(int * start, int * end);
+int max_max(int ar[], int n);
 char * getnchar(char * str, int n);
 void exer1(void);
 void retailSales(void);
@@ -622,8 +622,8 @@ void sum_arr2(void)
     long answer, min_answer, max_answer;
 
     answer = sump(marbles, marbles + SIZE1);
-    min_answer = min(marbles, marbles + SIZE1);
-    max_answer = max(marbles, SIZE1);
+    min_answer = min_min(marbles, marbles + SIZE1);
+    max_answer = max_max(marbles, SIZE1);
     printf("The total number of marbles is %ld.\n", answer);
     printf("The size of marbles is %zd bytes.\n", sizeof marbles);
     printf("The largest number is %ld.\n", max_answer);
@@ -645,7 +645,7 @@ int sump(int * start, int * end)
 
 }
 
-int max(int ar[], int n)
+int max_max(int ar[], int n)
 {
     int i = 0, max = ar[0];
 
@@ -658,7 +658,7 @@ int max(int ar[], int n)
     return max;
 }
 
-int min(int * start, int * end)
+int min_min(int * start, int * end)
 {
     int min;
 
@@ -744,7 +744,6 @@ void retailSales(void)
     for (month = 0, ptr = months; month < MONTHS; month++)
     {
         printf("%-11s $%8.2f\n", *(ptr++), sales[month]); // print out the values of the two arrays
-                                                         // using field width and precision specifiers
     }
 }
 
