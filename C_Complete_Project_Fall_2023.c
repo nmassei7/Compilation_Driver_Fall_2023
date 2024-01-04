@@ -9,6 +9,8 @@
 #include <ctype.h>
 #include <time.h>
 #include <stdlib.h>
+#include <string.h>
+
 #define HOUR_CONSTANT 60
 #define SIZE0 15 
 #define PAR 72
@@ -45,8 +47,11 @@ void paycheck(void);
 void payMenu(void);
 void characterCounter(void);
 void min_driver(void);
+double minimum(double, double);
 void chline_driver(void);
+void chline(char, int, int);
 void sort_driver(void);
+void sort(double *, double *, double *);
 void grades(void);
 void sum_arr2(void);
 int sump(int * start, int * end);
