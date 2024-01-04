@@ -202,7 +202,6 @@ int menu(void) {
     printf("***************************\n");
     scanf("%d", &choice);
     getchar();  // clear the buffer since the integer will be read
-    // but the act of pressing enter leaves the \n in the buffer
     return choice;
 }
 
@@ -399,7 +398,7 @@ void paycheck(void)
 
 }
 
-void paymenu(void) {
+void payMenu(void) {
 
     float hours, taxes, grosspay, netpay, payrate;
     int choice;
@@ -464,7 +463,7 @@ void paymenu(void) {
     printf("Thank you for using the pay check calculator!\n");
 }
 
-void CharacterCounter(void) {
+void characterCounter(void) {
     int ch;
     int alphaNumericCount = 0;
     int punctuationCount = 0;
